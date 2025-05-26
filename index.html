@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo Filosófica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: justify;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            
+        }
+        h2 {
+            font-size: 18px;
+            color: blue;
+            text-align: center;
+        }
+        .timeline {
+            display: flex;
+            left: 10px.
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10px;
+            margin: 10px auto;
+            width: 200px;
+        }
+        .year {
+            cursor: pointer;
+            padding: 5px;
+            background: #900C3F;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+    
+     .philosophy-label {
+            cursor: pointer;
+            padding: 5px;
+            margin-top: 100px;
+            background: #FFC300;
+            color: black;
+            border-radius: 5px;
+            text-align: judtify;
+            width: 80px;
+        }
+        .info-box {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 450px;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: white;
+            text-align: judtify;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 800px;
+        }
+  img {
+    width: 600%; /*  o  width: 100%; para ocupar el 100% del ancho */
+    height: 60px; /*  para mantener la relación de aspecto */
+  }
+        .info-box img {
+            width: 50%;
+            height:50%;
+            float: left;
+            margin-right: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+
+<h1>Principales Corrientes Filosóficas en la Filosofía de la Ciencia</h1>
+<h2>Línea de Tiempo</h2>
+  <img src="imagen_flecha.jpg" alt="flecha">
+
+  
+<div class="timeline">
+    <!-- Se generarán los años dinámicamente con JavaScript -->
+</div>
+
+<script>
+    const years = ["Siglo VI a.C.", "Siglo V a.C.", "Siglo IV a.C.", 1543, 1610, 1611, 1618, 1620, 1630, 1632, 1637, 1662, 1687,1689, 1710, 1739, 1851, 1854, 1900, 1905, 1913, 1920, 1934, 1960, 1969, 1996, "Siglo XXI"];
+
+    const yearInfo = {
+        "Siglo VI a.C.": "<strong>Filosofía Antigua</strong>. <p>Los filósofos cosmólogos son llamados así porque centraron su atención en el mundo (cosmos, en griego); estos pensadores son los pioneros del saber, aunque ellos quizás nunca lo supieron, y ni siquiera se utilizaba por entonces el término filosofía, y mucho menos el apelativo de filósofo.</p> <p>Se citan entre los más importantes a Tales de Mileto, llamado el primer filósofo, el cual consideró el agua o lo húmedo como elemento primigenio de todo. A Anaxímenes, que consideró al aire como el origen de todo. Y a Anaximandro, quien planteó la existencia de una sustancia material que había generado todas las cosas y que llamó ápeiron, o cosa indeterminada.</p> <p>Los pensadores cosmólogos o <strong>filósofos de la naturaleza</strong>, serán el punto de partida para la discusión filosófica posterior; ellos sentarán las bases de lo que vendrá más adelante en la evolución de la filosofía.</p>",
+        "Siglo V a.C.": "<strong>Filosofía Antigua</strong>. <p><strong>Los Pitagóricos</strong>. El número como sustancia del mundo es la hipóstasis del orden mensurable de los fenómenos. El gran descubrimiento de los Pitagóricos, el descubrimiento que determina su importancia en la historia de la ciencia occidental, consiste principalmente en la importancia fundamental que concedieron a la medida matemática para entender el orden y la unidad del mundo. La última fase del pensamiento pitagórico está dominada por la misma preocupación: hallar aquella ciencia de la medida que es al mismo tiempo fundamento del ser en sí y de la existencia humana. Los pitagóricos dieron, antes que nadie, expresión técnica a la aspiración fundamental del espíritu griego hacia la medida.",
+        "Siglo IV a.C.": "<strong>Platón y el Mundo de las Ideas</strong><br><br><br>Su concepto de un mundo ideal influyó en la matemática y la lógica, estableciendo la importancia de los modelos abstractos en la ciencia. <p>Platón determina tres cosas acerca de las ideas:</p><p> 1.° las ideas son los objetos específicos del conocimiento racional. </p><p>2.° las ideas son criterios o principios de juicio de las cosas naturales.</p> <p>3.° las ideas son causas de las cosas naturales.</p> <br><br><strong>Aristóteles y la lógica</strong>. <br><br><br>Desarrolló el método deductivo y la clasificación de los seres vivos, sentando las bases de la biología y la física. La lógica aristotélica es la lógica expuesta en el Organon y algunas otras partes del Corpus aristotelicum. Constituye, de un lado, una parte de la lógica antigua; de otra, un elemento fundamental de la lógica tradicional.",
+        1543: "<br><br><br>Publicación de <strong>De revolutionibus orbium coelestium</strong> (Sobre los giros de los orbes celestes) de Copérnico, que da comienzo a la <strong>Revolución Científica</strong>.",
+        1610: "<br><br><strong>Galileo confirma el modelo heliocéntrico con su telescopio</strong>. Galileo Galilei publicó sus ideas revolucionarias sobre el movimiento y la astronomía en varias obras clave. <p>En 1610, lanzó <strong>Sidereus Nuncius</strong> (El Mensajero de las Estrellas), donde presentó sus observaciones telescópicas que apoyaban el modelo heliocéntrico.</p>",
+        1611: "<br><br><br>Johannes Kepler  (Weil der Stadt, Baden-Wurtemberg, 27 de diciembre de 1571-Ratisbona, Baviera, 15 de noviembre de 1630) desarrolla su estudio sobre la óptica y percepción visual.",
+        1618: "<br><br><br>Comienzo de la Guerra de los Treinta Años fue una guerra librada en la Europa Central (principalmente el Sacro Imperio Romano Germánico) entre los años 1618 y 1648, en la que intervinieron la mayoría de las grandes potencias europeas de la época. Esta guerra marcó el futuro del conjunto de Europa en los siglos posteriores.",
+        1620: "<br><br><br>Publicación de <strong>Novum Organum</strong> por Francis Bacon, consolidando el empirismo. Francis Bacon  (Strand, Londres, 22 de enero de 1561-Highgate, Middlesex, 9 de abril de 1626) publica Novum Organum (Nuevo Órgano). Bacon es a menudo considerado un <strong>precursor clave del empirismo moderno</strong>. En esta obra, <strong>critica el método deductivo aristotélico y propone un método inductivo basado en la observación sistemática</strong>, la experimentación y la recopilación de datos para llegar a conclusiones generales. <p>Su enfoque en interpretar la naturaleza a través de la experiencia fue una piedra angular para el empirismo.</p>",
+        1630: "<br><br><br>El mecanicismo cartesiano comienza a influir en la filosofía científica.",
+        1632: "<br><br><br>El final del <strong>Renacimiento Científico</strong>, se considera que culminó en 1632 con la publicación del ensayo de Galileo; <strong>Diálogos sobre los dos máximos sistemas del mundo</strong>.",
+        1637: "<br><br><br><strong>Principales filósofos</strong>: René Descartes (1596 - 1650), Baruch Spinoza (1632 - 1677), Gottfried Leibnitz (1646 - 1716).<br><br><strong> Ideas principales</strong>: reconoce la razón como única fuente del auténtico conocimiento, por oposición al empirismo, que considera que la única fuente del conocimiento es la experiencia sensorial. René Descartes publica su obra <strong>El Discurso del método para conducir bien la propia razón y buscar la verdad en las ciencias</strong>, es la principal obra escrita por René Descartes y una obra fundamental de la filosofía occidental con implicaciones para el desarrollo de la filosofía y de la ciencia. <p> Descartes es considerado como <strong>el padre de la filosofía moderna</strong> y también, aunque con menos razón, como <strong>el fundador del idealismo moderno</strong>. <p>En todo caso, su pensamiento y su obra se hallan en un punto crucial en el desarrollo de la historia de la filosofía y pueden considerarse como inicio de un período que algunos historiadores hacen terminar en Hegel y otros hasta entrada la época contemporánea.</p><p><br><br><br><br><br><br><br>El método consiste de cuatro reglas: <p><strong>1. Evidencia:</strong> solo es verdadero todo aquello que no emite ninguna duda al pensamiento.</p> <p><strong>2. Análisis:</strong> reducir lo complejo a partes más simples para entenderlo correctamente.</p> <strong>3. Deducción:</strong> permitir a la operación racional deductiva el peso de la investigación, para encontrar las verdades complejas a partir de la deducción de las simples. <p><strong>4. Comprobación:</strong> Comprobar si lo descubierto a partir de la razón fue conseguido a través de estas reglas antes mencionadas.</p><strong>Aportes a las Matemáticas</strong>:<br> La contribución más significativa de Descartes a las matemáticas fue la invención de la <strong>geometría analítica</strong>, detallada en su obra La Géométrie (1637). Antes de él, el álgebra y la geometría eran disciplinas en gran medida separadas. <p><strong>El sistema de coordenadas cartesianas</strong>: Este sistema, que lleva su nombre, permitía representar formas geométricas mediante ecuaciones algebraicas y viceversa. Esto significaba que los problemas geométricos podían resolverse mediante métodos algebraicos y que las ecuaciones algebraicas podían visualizarse geométricamente. Este fue un concepto revolucionario que proporcionó una poderosa herramienta para el análisis matemático.</p>",
+        1662: "<br><br><br>Fundación de la Royal Society o Real Sociedad de Londres para el Avance de la Ciencia Natural (entre 1660 y 1662): Esta prestigiosa institución científica en Londres reunió a los pensadores más influyentes de la época, fomentando la experimentación, la discusión y la publicación de descubrimientos. John Locke tuvo contacto con algunos de sus miembros, como Robert Boyle. <p>La fundación de instituciones como la Royal Society de Londres (para el Mejoramiento del Conocimiento Natural) promovió la experimentación y el intercambio de observaciones entre científicos. Estas sociedades fueron cruciales para el desarrollo de la ciencia empírica y la difusión de sus métodos.</p>",
+        1687: "<br><br><br>La finalización de la <strong>Revolución Científica</strong> se atribuye a la gran síntesis de 1687 de <strong>Principia de Isaac Newton</strong>, que formuló las leyes del movimiento y de la gravitación universal y completó la síntesis de una nueva cosmología. <p>Aunque Newton también usó un marco matemático riguroso, su enfoque empírico se manifiesta en cómo formuló sus leyes a partir de la observación de fenómenos naturales y la realización de experimentos. La capacidad de sus leyes para predecir eventos observables fue una poderosa validación del método empírico.</p>",
+        1689: "<br><br><br><strong>Empirismo Inglés</strong>: Jonh Locke (1632-1704), el más influyente empirista inglés, publica Ensayo sobre el entendimiento Humano, obra en la que se encuentran las primeras bases del denominado Empirismo Inglés. <p>En esta corriente filosófica la experiencia es vista como fuente de todo conocimiento. Es una doctrina filosófica, y en particular gnoseológica, según la cual el conocimiento se halla fundado en 1: experiencia. El empirismo se contrapone por lo usual al racionalismo, según el cual el conocimiento se halla fundado, cuando menos en gran parte, en la razón.</p> Se contrapone también al lunatismo, según el cual el espíritu, el alma, la mente y, en general, el llamado sujeto cognoscente posee ideas innatas, esto es, anteriores a toda adquisición de datos. <p>Esta corriente filosófica hace énfasis en la inducción. La razón no puede por si misma generar conocimiento. Critica a las ideas metafísicas que no pueden ser verificadas por la experiencia.</p> <strong>Aporte a las matemáticas y la física</strong>:  Base filosófica de la Revolución Científica. Promoción del método experimental (conocimiento adquirido a través de la experimentación y observación). Método inductivo de Francis Bacon (estudio de casos particulares para llegar a leyes generales). El método científico de Isaac Newton en sus Principia Mathematica (1687), es el epítome del empirismo aplicado a la física. El empirismo sentó las bases para la idea de que una teoría científica debe ser verificable o falsable por la experiencia. Locke consideraba que las matemáticas eran un tipo de conocimiento demostrativo y certero, pero derivado de la comparación de ideas que, en última instancia, provenían de la experiencia. No eran innatas, sino construcciones de la mente a partir de lo empírico. Para pensadores como David Hume, las verdades matemáticas (como la geometría o la aritmética) eran relaciones de ideas. Esto significa que su verdad se deriva de la coherencia interna de los conceptos. <p><strong>Principales filósofos</strong>: Francis Bacon, Hobbes, Jonh Locke, George Berkeley, David Hume</p>",
+        1710: "<br><br><br><strong>George Berkeley</strong> fue un filósofo irlandés muy influyente cuyo principal aporte fue el desarrollo de la <strong>filosofía empirista radical</strong> conocida como <strong>inmaterialismo</strong> (también llamada convencionalmente idealismo subjetivo. <p>Escribió un gran número de obras, entre las que se pueden destacar el Tratado sobre los principios del conocimiento humano (1710) y Los tres diálogos entre Hylas y Philonus (1713) (Philonus, el «amante de la mente», representa a Berkeley, e Hylas, que toma su nombre de la antigua palabra griega para designar a la materia, representa el pensamiento de Locke).</p> <p>En 1734 publicó El analista, una crítica a los fundamentos de la ciencia, que fue muy influyente en el desarrollo de la matemática.</p>",
+        1739: "<br><br><br>David Hume (Edimburgo, 7 de mayo de 1711-Edimburgo, 25 de agosto de 1776) publica Tratado de la naturaleza humana. En la introducción, Hume presenta la idea de colocar toda la ciencia y la filosofía sobre una base novedosa: una investigación empírica de la naturaleza humana. Hume afirma que todo el conocimiento humano proviene de los sentidos. Nuestras percepciones pueden dividirse en dos categorías: ideas e impresiones.",
+        1851: "<br><br><br>El Positivismo designa la doctrina y la escuela fundadas por Auguste Comte (19 de enero de 1798-5 de septiembre de 1857). Esta doctrina comprende no sólo una teoría de la ciencia, sino también, y muy especialmente, una reforma de la sociedad y una religión. <br><br>Precisamente la acentuación de uno u otro de tales factores fue lo que decidió el ulterior destino de la escuela: para algunos, el positivismo era una doctrina del saber; para otros, era una norma para la sociedad y una regla de vida para el hombre. <br><br>En general, ambos rasgos del positivismo permanecieron mezclados a lo largo del siglo XIX. Sin embargo, desde el punto de vista estrictamente filosófico ha sido la consideración positivista del saber lo que ha predominado y lo que se ha extendido hasta nuestros días. <br><br>De ahí que muchas veces se designe como positivismo todo un conjunto de tendencias que surgieron en parte como reacción frente a la filosofía romántica especulativa (idealismo alemán postkantiano, teísmo especulativo, etc.) y que se reafirmaron en cada uno de los instantes en que se quiso revalorizar el saber filosófico sin recurrir a ninguna de las corrientes metafísicas ya tradicionales. <br><br> Comte desarrolla sus ideas en obras como Curso de Filosofía Positiva. Para el tiempo de la propuesta de estas ideas existía una fuerte necesidad de reconstruir la sociedad sobre bases sólidas. Comte creía que la única forma de lograrlo era a través de la aplicación de un método científico riguroso a los asuntos sociales, al igual que las ciencias naturales lo habían hecho para el mundo físico. <br><br> Propone la Ley de los Tres Estados: Teológico, Metafísico y Positivo. Crea, además, la Sociologia. Principal filósofo: Augusto Comte",
+        1854: "<br><br><br>George Boole (Lincoln, Lincolnshire, Inglaterra, 2 de noviembre de 1815-Ballintemple, Condado de Cork, Irlanda, 8 de diciembre de 1864). En 1854 publicó An Investigation of the Laws of Thought on Which are Founded the Mathematical Theories of Logic and Probabilities, donde desarrolló un sistema de reglas que le permitían expresar, manipular y simplificar problemas lógicos y filosóficos cuyos argumentos admiten dos estados (verdadero o falso) por procedimientos matemáticos. Se podría decir que es el padre de los operadores lógicos simbólicos y que gracias a su álgebra hoy en día es posible operar simbólicamente para realizar operaciones lógicas.",
+        1900: "<br><br><br><strong>Max Planck y la radiación de cuerpo negro:</strong><p>En 1900, Planck propuso que la energía no se emite como una onda continua, sino en paquetes discretos (cuantos) para explicar la ley de radiación de un cuerpo negro, utilizando la ecuación E=h·ν, donde h es la constante de Planck y ν la frecuencia.</p>",
+        1905: "<br><br><br><strong>Albert Einstein y el efecto fotoeléctrico:</strong>.<p>En 1905 Einstein utilizó la idea de los cuantos para explicar el efecto fotoeléctrico, postulando que la luz también se comporta como partículas (fotones) que pueden interactuar con la materia.</p>",
+        1913: "<br><br><br><strong>El modelo de Bohr:</strong> En 1913, Niels Bohr introdujo un modelo atómico que incorporaba conceptos cuánticos, sugiriendo que los electrones orbitan el núcleo en niveles de energía discretos.",
+        1920: "<br><br><br><strong>Desarrollo de la mecánica cuántica</strong>: A partir de la década de 1920, se desarrolló la mecánica cuántica, con figuras como Erwin Schrödinger y Werner Heisenberg, quienes formularon ecuaciones y principios fundamentales que describen el comportamiento de los sistemas a nivel atómico y subatómico.",
+        1934: "<br><br><br>Karl Popper propone lo que se llama <strong>la tesis de la falsificabilidad</strong>. Grosso modo la tesis en cuestión sienta que una proposición es propiamente científica cuando puede ser <strpng>falsada</strpng> por algún hecho que sería ejemplo de una posibilidad excluida por la proposición. La compatibilidad de una proposición científica con todas las observaciones o hechos posibles no demuestra que tal proposición es verdadera; en rigor, demuestra que no lo es. <p>Una proposición o, en general, una hipótesis que explique todos los hechos a los cuales se refiere, es decir, una proposición no faisable debe ser rechazada como no científica. La probabilidad de que una hipótesis sea verdadera es un criterio insuficiente, pues hay hipótesis sumamente probables que no explican nada, o casi nada; mejor dicho, el que expliquen nada, o casi nada, las hace justamente harto probables.</p> Las proposiciones científicas, en suma, son aquellas que son faisables o refutables, es decir, aquellas para las cuales puede concebirse la posibilidad de ser faisables o refutables. Por eso la ciencia consiste no sólo en confirmación de hipótesis, sino en pruebas para ver si las hipótesis son falseables.",
+        1960: "<br><br><br>El <strong>estructuralismo en la filosofía de la matemática</strong> es una corriente que sostiene que las matemáticas no tratan sobre objetos individuales (como números o conjuntos), sino sobre <strong>estructuras</strong> y las relaciones entre sus elementos. En lugar de considerar los números como entidades independientes, el estructuralismo los ve como posiciones dentro de un sistema matemático. El estructuralismo en la filosofía de las matemáticas es una corriente que sostiene que las matemáticas no tratan sobre objetos individuales con una sustancia intrínseca, sino sobre las relaciones y patrones que esos objetos instancian o ejemplifican. En otras palabras, lo que importa en matemáticas no es la naturaleza última de los números, conjuntos o funciones, sino cómo se relacionan entre sí dentro de un sistema o estructura.<strong>Conceptos Clave del Estructuralismo</strong> <p>Para entender el estructuralismo, es útil contrastarlo con visiones más tradicionales, como el platonismo. </p><br><strong>Anti-Platonismo (en cuanto a la naturaleza de los objetos)</strong>: Un platonista creería que el número 2 existe como una entidad abstracta y autosuficiente. Un estructuralista, en cambio, diría que no hay una esencia intrínseca al número 2. Lo que hace que el 2 sea el 2 son sus relaciones con otros números: es el sucesor de 1, es la mitad de 4, es un número par, etc. Identidad por las Relaciones: Para un estructuralista, los objetos matemáticos son como posiciones o roles dentro de una estructura. Imagina un equipo de fútbol: lo que define a un delantero no es su identidad personal, sino el rol que desempeña en relación con los demás jugadores (centrocampistas, defensas, portero) y las reglas del juego. Si intercambias a dos delanteros, la estructura del equipo (sus posiciones relativas) no cambia. De manera similar, los números 1, 2, 3... no son objetos específicos, sino la primera posición, la segunda posición, la tercera posición, etc., en una estructura numérica. <br><strong>Estructuras Multiples</strong>: Las estructuras matemáticas pueden ser realizadas o instanciadas por diferentes conjuntos de objetos. Por ejemplo, la estructura de los números naturales (con la suma y la multiplicación) puede ser ejemplificada tanto por los números arábigos 1, 2, 3,... como por los números romanos I, II, III,... o incluso por ciertas construcciones de conjuntos en la teoría de conjuntos. Lo que comparten es la misma estructura relacional.<br><strong>Énfasis en los Sistemas y las Relaciones</strong>: El estructuralismo se centra en las propiedades de sistemas abstractos, no en las propiedades intrínsecas de sus elementos. Se preocupa por cómo se organizan esos elementos, cómo interactúan y qué patrones forman.",
+        1969: "<br><br><br><strong>Realismo</strong> El realismo filosófico es aquella postura que manifiesta que los objetos tienen una existencia independiente del sujeto que lo observa. Dentro de la corriente racionalista de oposición al neopositivismo se encuentra a Mario Bunge (1919). Analiza los problemas de diversas epistemologías, desde el racionalismo crítico popperiano hasta el empirismo, el subjetivismo o el relativismo. Bunge es realista crítico. Para él la ciencia es falibilista (el conocimiento del mundo es provisional e incierto), pero la realidad existe y es objetiva. Además se presenta como materialista , pero para soslayar los problemas de esta doctrina apostilla que se trata de un materialismo emergentista.",
+        1996: "<br><br><br><strong>Constructivismo</strong><br>Ernst von Glasersfeld, fue un filósofo y cibernético teórico del constructivismo radical propone en 1996 las bases del Constructivismo como corriente filosórica. El eje fundamental del constructivismo no gira en torno a una ontología de la realidad, sino sobre cómo los animales percibimos esa realidad, y cuáles son los mecanismos que tenemos para interpretarla, o sea: que hacemos con dicha percepción y sus limitaciones; y al mismo tiempo propone que mediante ese proceso de observarción, percepción e interpretación,  la realidad es construída por nosotros. El planteo va un poco más allá y pareciera negar cualquier tipo de «realidad ontológica»; pero ésto no tiene nada que ver con un místico antagonismo del naturalismo; el constructivismo habla desde la filosofía, la psicología y la sociología; no pretende ser una ciencia natural y se mueve solo dentro de los límites de la teoría, que es una teoría del pensamiento. En este sentido, la conciencia es «pensamiento» y el pensamiento es «realidad»; por lo tanto, la realidad no contiene nada que esté fuera de aquel3. Lo que niega la teoría no es «la realidad»; sino «objetividad» en nuestra capacidad de observación, percepción y compresión, y muestra una serie de limitaciones biológicas, psicológicas y sociales que no podemos superar ni con voluntad ni con método. Ahora bien: dentro de nuestras limitaciones (o más precisamente: debido a ellas), estamos permanentemente interpretando las observaciones que hacemos de nuestro medio ambiente y aquello que percibimos de él. Ésta no es es una interpretación consciente: aquí interpretar es parte de los procesos de observación y percepción; porque nuestra capacidad para observar y percibir es limitada; está condicionada por nuestros sentidos y por nuestros aparatos biológico y psíquico. Así, el mundo se nos prersenta de una forma que está determinada por nuestras limitaciones y no «tal cual es». Para nombrar solamente dos, voy a dar a continuación un ejemplo biológico y otro evolutivo-psicológico de dicho condicionamiento.",
+        "Siglo XXI": "<br><br><br>Esta filosofía nace de manera sistemática durante el siglo XX, los ingenieros de esa época intentaron mostrar a través de la tecnología, la reflexión que se provoca mediante la utilización y elaboración de la técnica, para así poder ver lo negativo y positivo de ésta; esto surge como consecuencia de querer saber cómo era el funcionamiento interno de cada objeto tecnológico que se utilizaba, estudiando y analizando su evolución en el tiempo, desde el renacimiento hasta la actualidad. La filosofía de la tecnología nace principalmente como un medio de investigación de la ingeniería, pero especialmente de análisis, comprensión y una manera de confrontar las técnicas de las máquinas o artefactos que se utilizan en el diario vivir. Principalmente la filosofía de la tecnología sirve para poder saber a fondo el uso práctico que se les da los objetos tecnológicos, más allá de su uso teórico que deben tener. Además, <strong>intenta resolver algunas de las siguientes preguntas</strong>: ¿Qué es la tecnología y en qué se diferencia de la técnica? ¿Qué relación hay entre ciencia, técnica y tecnología? ¿Tiene mucha importancia la tecnología hoy en día? y si la tiene, ¿Siempre ha sido así? ¿Nos afecta la tecnología? ¿Cómo? ¿Puede llegar a poner en riesgo nuestra existencia individual y como especie? ¿Puede servirnos la ciencia y la tecnología para mejorar nuestra situación y circunstancia? <br><br><strong>Principales filósofos contemporaneos</strong>: Karl Marx, Enst Kapp, John Dewey, André Leroi-Gourhan",
+    };
+
+
+    
+
+    const timeline = document.querySelector('.timeline');
+
+    years.forEach((year, index) => {
+        const yearElement = document.createElement('div');
+        yearElement.classList.add('year');
+        yearElement.textContent = year;
+        //yearElement.style.backgroundColor = `rgb(${30 + index * 22}, ${30 + index * 22}, ${100 + index * 15})`;
+        yearElement.addEventListener('click', () => showInfo(year));
+        timeline.appendChild(yearElement);
+        
+           // Si el año es 1689, agregamos el label de "Empirismo"
+        if (year === 1637) {
+            const philosophyLabel = document.createElement('h5');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Racionalismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+        if (year === 1689) {
+            const philosophyLabel = document.createElement('h4');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Empirismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+        if (year === 1851) {
+            const philosophyLabel = document.createElement('h4');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Positivismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+        
+        if (year === 1969) {
+            const philosophyLabel = document.createElement('h5');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Realismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+        
+        if (year === 1934) {
+            const philosophyLabel = document.createElement('h6');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Falsacionismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+        
+        if (year === 1960) {
+            const philosophyLabel = document.createElement('h6');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Estructuralismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+        
+        if (year === 1996) {
+            const philosophyLabel = document.createElement('h6');
+            philosophyLabel.classList.add('philosophy-label');
+            philosophyLabel.textContent = "Constructivismo";
+            yearElement.appendChild(philosophyLabel);
+        }
+         
+
+
+        const infoBox = document.createElement('div');
+        infoBox.classList.add('info-box');
+        infoBox.id = `infoBox-${year}`;
+        infoBox.innerHTML = `
+            <img src="imagen_${year}.jpg" alt="${year}">
+            <strong>${year}</strong><br>
+            ${yearInfo[year]}
+        `;
+        document.body.appendChild(infoBox);
+    });
+
+    function showInfo(year) {
+        document.querySelectorAll('.info-box').forEach(box => box.style.display = 'none');
+        document.getElementById(`infoBox-${year}`).style.display = 'block';
+    }
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('year')) {
+            document.querySelectorAll('.info-box').forEach(box => box.style.display = 'none');
+        }
+    });
+
+
+</script>
+
+</body>
+</html>
